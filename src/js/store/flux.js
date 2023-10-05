@@ -14,6 +14,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 			characters: [],
+			planets : [],
 			contador: 0,
 			favoritos: []
 		},
@@ -25,7 +26,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			loadSomeData: () => {
 				fetch("https://swapi.dev/api/people/")
 				.then(response => response.json())
-				.then((data)=> setStore({characters : data.results}))
+				.then((data)=> setStore({characters : data.results}));
+				fetch("https://swapi.dev/api/planets/")
+				.then(response => response.json())
+				.then((data)=> setStore({planets : data.results}))
 			},
 			  
 			changeColor: (index, color) => {
