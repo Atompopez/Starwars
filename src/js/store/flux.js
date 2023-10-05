@@ -14,7 +14,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 			characters: [],
-			contador: 0
+			contador: 0,
+			favoritos: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -41,9 +42,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//reset the global store
 				setStore({ demo: demo });
 			},
-			anadir : () => {
+			anadir : (nombre) => {
 				const store = getStore();
-				setStore({ contador : store.contador + 1})
+
+				if (!(store.favoritos.includes(nombre))){
+					setStore({favoritos : [...store.favoritos, nombre]})
+					setStore({ contador : store.favoritos.length})
+				}
+			},
+			borrar : (id) => {
+				const store = getStore();
+				setStore({favoritos : store.favoritos.filter((item,index) =>  index != id)})
+				setStore({ contador : store.favoritos.length})
 			}
 		}
 	};

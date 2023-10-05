@@ -13,8 +13,8 @@ export const Card = (props) => {
                 <p className="card-text">Gender: {props.gender}</p>
                 <p className="card-text">Hair color: {props.hairColor}</p>
                 <p className="card-text">Eye color: {props.eyeColor}</p>
-                <a href="#" className="btn btn-primary">learn more!</a>
-                <a onClick={()=>{actions.anadir()}} className="btn btn-primary">13</a>
+                <a onClick={()=>{actions}} className="btn btn-primary">learn more!</a>
+                <a onClick={()=>{actions.anadir(props.name)}} className="btn btn-primary">13</a>
             </div>
         </div>
     )
