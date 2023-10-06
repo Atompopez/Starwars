@@ -17,10 +17,11 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div className="row d-flex justify-content-center">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
+					<div style={{height:'90px'}}></div>
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />

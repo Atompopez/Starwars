@@ -8,9 +8,9 @@ export const Home = () => {
   const { store } = useContext(Context);
 
   return (
-    <>
+    <div className="home">
       <div >
-        <p>characters</p>
+        <p className="titulo">Characters</p>
         <div className="row flex-row flex-nowrap" style={{overflowX:"auto"}}>
           {store.characters.map((item,index) => (
           <Card key={index} name={item.name} gender={item.gender} 
@@ -19,7 +19,7 @@ export const Home = () => {
         </div>
       </div>
       <div>
-        <p>planets</p>
+        <p className="titulo">Planets</p>
         <div className="row flex-row flex-nowrap" style={{overflowX:"auto"}}>
           {store.planets.map((item,index) => (
           <Planet key={index} name={item.name} population={item.population} 
@@ -27,6 +27,6 @@ export const Home = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };

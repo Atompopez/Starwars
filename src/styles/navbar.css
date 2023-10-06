@@ -1,0 +1,27 @@
+nav{
+    padding: 20px !important;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 100;
+}
+.imagen{
+    width: 60px;
+    margin-left: 20px;
+}
+#contador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+}
+#boton{
+    width: 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

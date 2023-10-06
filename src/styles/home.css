@@ -1,0 +1,10 @@
+.titulo{
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
