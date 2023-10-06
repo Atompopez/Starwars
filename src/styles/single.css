@@ -1,0 +1,31 @@
+#cuerpo{
+    width: 80%;
+}
+.imagen1{
+    width: 400px;
+    height: 300px;
+}
+.head{
+    display: flex;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+.bajo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: red;
+    border-top: 1px solid red;
+    padding-top: 20px;
+}
+.bajo > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
